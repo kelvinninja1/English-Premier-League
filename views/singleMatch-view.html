@@ -1,0 +1,60 @@
+<br><br>
+<div class="container text-center" style="color:black;">
+    <div class="row">
+        <div class="col-lg-10 col-md-12 mx-auto">
+            <div class="post-preview">
+                <table align="center" class="table table-bordered table-hover">
+                    <tr style="background-color:#FFD700; color:black;">
+                        <th colspan="3" class="text-center">
+                           {{singleMatch.round}}
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th colspan="3" class="text-center"><h2 class="post-title">{{singleMatch.name1}} VS {{singleMatch.name2}}</h2>       
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <td>Team Name</td>
+                        <td><a ng-href="#/teamView">{{singleMatch.name1}}</a></td>
+                        <td><a ng-href="#/teamView">{{singleMatch.name2}}</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>Team Code</td>
+                        <td>{{singleMatch.team1_code}}</td>
+                        <td>{{singleMatch.team2_code}}</td>
+                    </tr>
+
+                    <tr>
+                        <td>Team Key</td>
+                        <td>{{singleMatch.team1_key}}</td>
+                        <td>{{singleMatch.team2_key}}</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Team Score</td>
+                        <td>{{singleMatch.team1_score}}</td>
+                        <td>{{singleMatch.team2_score}}</td>
+                    </tr>
+                    
+                    <tr>
+                    <td>Final Result</td>
+                    <td colspan="2">{{singleMatch.final_result}}</td>
+                    </tr>
+
+                </table>
+            </div>
+        </div>    
+    </div>
+
+    <div>
+        <h4 class="pull-right">Match Date {{singleMatch.matchDate}}</h4>
+    </div>
+     <br>
+     <br>
+    <div>
+        <a class="btn btn-primary" ng-href="#/totalMatches">Go Back</a>
+    </div>
+</div>

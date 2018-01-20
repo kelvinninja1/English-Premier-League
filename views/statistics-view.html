@@ -1,0 +1,108 @@
+
+<br><br><div class="row text-center">
+    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+        <form class="form-group">
+            <label>Year</label>
+            <select class="form-control" ng-model="stats.year" ng-change="stats.statisticMatches()">
+                <option value="year15">2015-16</option>
+                <option value="year16">2016-17</option>
+            </select>
+        </form>
+    </div>
+
+	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+		<form ng-submit="stats.submit()" class="form-group">
+			<label>Select Team Name</label>
+            <select class="form-control" ng-model="stats.name" ng-change="stats.statisticMatches()">
+
+                <option value="Manchester United">Manchester United</option>
+                <option value="Tottenham Hotspur">Tottenham Hotspur</option>
+                <option value="Aston Villa">Aston Villa</option>
+                <option value="Everton">Everton</option>
+                <option value="Watford">Watford</option>
+                <option value="Leicester City">Leicester City</option>
+                <option value="Sunderland">Sunderland</option>
+                <option value="Norwich">Norwich</option>
+                <option value="Crystal Palace">Crystal Palace</option>
+                <option value="Chelsea">Chelsea</option>
+                <option value="Swansea">Swansea</option>
+                <option value="Arsenal">Arsenal</option>
+                <option value="West Ham United">West Ham United</option>
+                <option value="Newcastle United">Newcastle United</option>
+                <option value="Southampton">Southampton</option>
+                <option value="Stoke City">Stoke City</option>
+                <option value="Liverpool">Liverpool</option>
+                <option value="West Bromwich Albion">West Bromwich Albion</option>
+                <option value="Manchester City">Manchester City</option>
+                <option value="Norwich">Norwich</option>
+                <option value="Bournemouth ">Bournemouth </option>
+                <option value="Hull City">Hull City</option>
+                <option value="Burnley">Burnley</option>
+                <option value="Middlesbrough">Middlesbrough</option>
+            </select>
+             <br>
+	        <button class="btn btn-success btn-xs" type="submit" ng-click="showTable = (showTable) ? true :true ;">Submit</button>
+	    </form>
+	</div>
+</div>
+
+
+<div class="container text-center">
+    <div class="row">
+        <div class="col-lg-10 col-md-12 mx-auto">
+            <div class="post-preview">
+                <table align="center" class="table table-bordered table-hover text-center" style="color:black;">
+                    <tr>
+                        <th colspan="3" class="text-center" style="background-color: #FFD700; color:black;">
+                        <h3>Perfomance of The Team</h3>
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <td>Team Name</td>
+                        <td>{{stats.teamName}}</td>
+                    </tr>
+
+                    <tr>
+                        <td>Matches Played</td>
+                        <td>{{stats.played}}</td>
+                    </tr>
+
+                    <tr>
+                        <td>Matches Won</td>
+                        <td>{{stats.won}}</td>
+                    </tr>
+
+                    <tr>
+                        <td>Matches Lost</td>
+                        <td>{{stats.lost}}</td>
+                    </tr>
+
+                    <tr>
+                        <td>Matches Draw</td>
+                        <td>{{stats.draw}}</td>
+                    </tr>
+
+                    <tr>
+                        <td>Total Goals</td>
+                        <td>{{stats.goal}}</td>
+                    </tr>
+
+                    <tr>
+                        <td>Winning Chances</td>
+                        <td>{{stats.winning | number:2}}%</td>
+                    </tr>
+
+                    <tr>
+                        <td>Lossing Chances</td>
+                        <td>{{stats.lossing | number:2}}%</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <a class="btn btn-primary" ng-href="#/totalMatches">Go Back</a>
+    </div>
+</div>
